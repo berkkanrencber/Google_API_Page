@@ -1,7 +1,7 @@
 const { json } = require("body-parser");
 const { application } = require("express");
 const { write } = require("fs");
-const requestModule = require('./backend/modules/requestModule.js');
+const requestModule = require('./requestModule.js');
 require('dotenv').config();
 
 const person = {

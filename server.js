@@ -1,14 +1,14 @@
 const express = require('express');
 const bodyParser = require('body-parser');
-const ResponseNearbySearchModel = require('./models/responseNearbySearchModel');
-const ResponseDetailModel = require('./models/responseDetailModel');
-const ResponseAutocompleteModel = require('./models/responseAutocompleteModel');
-const ResponseGeocodeModel = require('./models/responseGeocodeModel');
-const { sendRequest } = require('./modules/requestModule');
-const { checkProperty } = require('./modules/filter');
+const ResponseNearbySearchModel = require('./responseNearbySearchModel');
+const ResponseDetailModel = require('./responseDetailModel');
+const ResponseAutocompleteModel = require('./responseAutocompleteModel');
+const ResponseGeocodeModel = require('./responseGeocodeModel');
+const { sendRequest } = require('./requestModule');
+const { checkProperty } = require('./filter');
 const path = require('path');
 const { send } = require('process');
-require('dotenv').config({path: '../.env'});
+require('dotenv').config({path: './.env'});
 const PORT = process.env.PORT || 3000;
 
 const app = express();

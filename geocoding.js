@@ -1,4 +1,4 @@
-import { sendRequest } from "../send-request.js";
+import { sendRequest } from "./send-request.js";
 
 
 let selectedLat;
