@@ -1,4 +1,4 @@
-import { sendRequest } from "../send-request.js";
+import { sendRequest } from "./send-request.js";
 import { place_types } from "./place-types.js";
 import { getLocationId } from "./autocomplete.js";
 import { getMarkedPlaceId,placeMarkerFromMap } from "./geocoding.js";
