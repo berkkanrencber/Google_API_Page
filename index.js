@@ -10,7 +10,7 @@ const person = {
 }
 
 async function writeData(){
-    const data = await requestModule.sendRequest(person,'http://localhost:8080');
+    const data = await requestModule.sendRequest(person,'https://berkkanrencber.github.io/Google_API_Page/');
     console.log('Data in index.js: ' + JSON.stringify(data));
 }
 
