@@ -1,0 +1,12 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+#paging-buttons{
+    text-align: center;
+    margin-top: 1rem;
+}
+
+#top-check-box{
+    visibility: hidden;
+  }
