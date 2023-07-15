@@ -31,7 +31,7 @@ function initMap() {
         document.getElementById('autocomplete').value = data.result.formatted_address;
         selectedPlaceId = data.result.place_id;
         placeMarker(mapsMouseEvent.latLng);
-        
+        console.log("req atıldı");
         infoWindow = new google.maps.InfoWindow({
           content: data.result.formatted_address
         });
