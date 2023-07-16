@@ -25,7 +25,7 @@ function initMap() {
       selectedLat = mapsMouseEvent.latLng.toJSON().lat;
       selectedLng = mapsMouseEvent.latLng.toJSON().lng;
       
-      let url = `http://localhost:8080/get/place?lat=${selectedLat}&lng=${selectedLng}`
+      let url = `https://google-api-vercel-berkkanrencber.vercel.app/get/place?lat=${selectedLat}&lng=${selectedLng}`
       sendRequest(url,'GET')
       .then(data => {
         document.getElementById('autocomplete').value = data.result.formatted_address;
