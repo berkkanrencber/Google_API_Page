@@ -12,7 +12,7 @@ function clickRequest(){
     var ratingValue=document.getElementById('rating-input-text').value;
     var place_id = getLocationId() ? getLocationId() : getMarkedPlaceId();
     var totalValue=document.getElementById('total-rating-input-text').value;
-    let URL = `https://berkkanrencber.github.io/Google_API_Page/get/nearby_search?place_id=${place_id}&radius=${radiusValue}&type=${place_types[typeValue.selectedIndex]}&rating=${ratingValue}&user_ratings_total=${totalValue}`
+    let URL = `http://localhost:8080/get/nearby_search?place_id=${place_id}&radius=${radiusValue}&type=${place_types[typeValue.selectedIndex]}&rating=${ratingValue}&user_ratings_total=${totalValue}`
 
     sendRequest(URL, 'GET')
         .then(data => {   
@@ -119,7 +119,7 @@ function checkSelectedPlaces(){
 }
 document.getElementById('export-btn').addEventListener('click',click_export_button);
 async function click_export_button(){
-    var base_url = "https://berkkanrencber.github.io/Google_API_Page/get/place_detail?place_id="
+    var base_url = "http://localhost:8080/get/place_detail?place_id="
     var csv = "Mekan adı, Puan, Değerlendirme Sayısı, Telefon, Adres\n"
     for(var place_id of selected_places){
         var url = base_url +place_id.substring(1);
@@ -146,7 +146,7 @@ function downloadCSV(csv){
 }
 function fetchPlaceDetails(place_id){
 
-    let URL = `https://berkkanrencber.github.io/Google_API_Page/get/place_detail?place_id=${place_id.currentTarget.param}`
+    let URL = `http://localhost:8080/get/place_detail?place_id=${place_id.currentTarget.param}`
 
     sendRequest(URL, 'GET')
         .then(data => {   
